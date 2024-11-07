@@ -207,7 +207,37 @@ h1 {
     width: 30px;
     height: 30px;
 }
+/* Loading spinner style */
+.spinner {
+    display: none;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Disable the form elements when submitting */
+.form-submitting input,
+.form-submitting button,
+.form-submitting textarea {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Styling the Submit button */
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .content {
