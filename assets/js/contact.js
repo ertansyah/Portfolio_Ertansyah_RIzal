@@ -1,29 +1,29 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Mencegah pengiriman form default
 
-            var form = this;
-            var formData = new FormData(form);
+    document.addEventListener("DOMContentLoaded", function() {
+        // Dapatkan ID ikon berdasarkan halaman saat ini
+        const currentPage = window.location.pathname;
 
-            // Kirimkan data ke Formspree dengan 'no-cors'
-            fetch(form.action, {
-                method: form.method,
-                body: formData,
-                mode: 'no-cors'  // Menambahkan opsi 'no-cors'
-            })
-            .then(response => {
-                // Reset form setelah pengiriman berhasil
-                form.reset(); // Kosongkan form
+        if (currentPage === "/contact.html") {
+            document.getElementById("contact-icon").classList.add("active");
+        } else if (currentPage === "/index.html") {
+            document.getElementById("home-icon").classList.add("active");
+        } else if (currentPage === "/portfolio.html") {
+            document.getElementById("portfolio-icon").classList.add("active");
+        } else if (currentPage === "/about.html") {
+            document.getElementById("about-icon").classList.add("active");
+        }
 
-                // Redirect ke halaman sukses
-                window.location.href = 'success.html'; // Redirect ke halaman sukses
-            })
-            .catch(error => {
-                // Jika terjadi error, redirect ke halaman gagal
-                window.location.href = 'fail.html';
-            });
-        });
+       
+    });
+
+    function showLoading() {
+        // Disable form and show loading spinner
+        document.getElementById('contactForm').classList.add('form-submitting');
+        document.getElementById('loadingSpinner').style.display = 'inline-block';
+        
+        // Clear the form after submission
+        setTimeout(() => {
+            document.getElementById('contactForm').reset();  // Reset the form
+        }, 1000);  // Delay to show the spinner before resetting the form
     }
-});
+
