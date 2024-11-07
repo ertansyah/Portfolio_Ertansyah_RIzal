@@ -45,7 +45,7 @@ body {
     
 }
 /* Sidebar active icon */
-.sidebar .active {
+.icon.active {
     background-color: #4CAF50; /* Green when active */
     box-shadow: 0 0 8px #28a745, 0 0 12px #28a745, 0 0 16px #28a745;
 }
