@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1f1d1d;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #4CAF50;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Contact Info */
+.info-table {
+    display: table;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.info-row {
+    display: table-row;
+}
+
+.info-cell {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.info-cell:not(.icon) {
+    text-align: left;
+}
+
+.contact-text {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #fff;
+}
+
+.contact-text h2 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Form Styling */
+.contact-info {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.contact-info h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.icon {
+    margin-right: 5px;
+    color: #ffffff;
+}
+
+.contact-form {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.contact-form h2 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-row input,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background-color: #333;
+    border: 2px solid #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #28a745;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.sidebar .icon {
+    background-color: #223438;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+/* Sidebar active icon */
+.sidebar .active {
+    background-color: #4CAF50;
+    box-shadow: 0 0 8px #28a745, 0 0 12px #28a745, 0 0 16px #28a745;
+}
+.social-icons {
+    margin-top: 20px;
+    display: flex; /* Menyusun ikon secara horizontal */
+    justify-content: center; /* Mengatur ikon agar berada di tengah */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Jarak antar ikon secara horizontal */
+    display: inline-block; /* Mengubah menjadi inline-block agar berada di satu baris */
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr; /* Stack content vertically */
+    }
+
+    .sidebar {
+        position: fixed;
+        bottom: 50; /* Sidebar berada di bawah layar */
+        left: 0;
+        top: 95%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 8%;
+        gap: 70px; /* Mengatur jarak antar ikon */
+        background-color: #333; /* Background saat sidebar di bawah */
+        padding: 10px 0;
+    }
+
+    .sidebar .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        gap: 15px;
+    }
+
+    .contact-text h2 {
+        font-size: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    }
+
+    .sidebar {
+        position: fixed;
+        bottom: 50; /* Sidebar berada di bawah layar */
+        left: 0;
+        top: 95%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 8%;
+        gap: 60px; /* Mengatur jarak antar ikon */
+        background-color: #333; /* Background saat sidebar di bawah */
+        padding: 10px 0;
+    }
+
+    .sidebar .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}

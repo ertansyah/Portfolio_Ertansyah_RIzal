@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <!-- Link ke Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles/contact.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html" class="icon" id="home-icon"><i class="fas fa-home"></i></a>
+        <a href="about.html" class="icon" id="about-icon"><i class="fas fa-user"></i></a>
+        <a href="portfolio.html" class="icon" id="portfolio-icon"><i class="fas fa-briefcase"></i></a>
+        <a href="contact.html" class="icon" id="contact-icon"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="container">
+        <header>
+            <h1>CONTACT <span class="highlight">ME</span></h1>
+        </header>
+        <br><br>
+        <div class="content">
+            <section class="contact-info">
+                <div class="contact-text">
+                    <h2>Reach Out to Us</h2>
+                    <p>We’re ready to collaborate! Feel free to reach out anytime.</p>
+                </div>
+
+                <div class="info-table">
+                    <div class="info-row">
+                        <div class="info-cell icon"> <strong>Name</strong></div>
+                        <div class="info-cell">Ertansyah Rizal Priadi Sumarna</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-cell icon"> <strong>Location</strong></div>
+                        <div class="info-cell">Widasari, Indramayu</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-cell icon"> <strong>Email</strong></div>
+                        <div class="info-cell">ertansyah.rizal@example.com</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-cell icon"><strong>Number</strong></div>
+                        <div class="info-cell">083102066000</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="contact-form">
+                <h2 class="contact-text">Send a message</h2>
+                <form action="submit.php" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject of Message" required>
+                    <br>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+
+
+    </div>
+    <footer class="social-icons">
+        <a href="https://api.whatsapp.com/send/?phone=%2B62083102066000&text&type=phone_number&app_absent=0" target="_blank"><img src="assets/img/whatsapp-icon.png" alt="WhatsApp" ></a>
+        <a href="https://t.me/Ertansyah_rizal?text=Halo%2C%20saya%20ingin%20menghubungi%20Anda.
+        " target="_blank"><img src="assets/img/telegram-icon.png" alt="Telegram"></a>
+        <a href="https://www.instagram.com/ertansyah_/profilecard/?igsh=MTRjcWI1c3gyanliaQ==" target="_blank"><img src="assets/img/instagram-icon.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/ertansyah-rizal-priadi-sumarna-3545a0251/" target="_blank"><img src="assets/img/linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="https://github.com/ertansyah" target="_blank"><img src="assets/img/github.png" alt="Github"></a>
+    </footer>
+    <br><br>
+    <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

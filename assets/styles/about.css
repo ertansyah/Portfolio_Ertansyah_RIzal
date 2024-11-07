@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1d1d;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    position:fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent; /* Default background */
+    padding: 10px;
+}
+
+.sidebar .icon {
+    background-color: #223438;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    
+}
+/* Sidebar active icon */
+.sidebar .active {
+    background-color: #4CAF50; /* Green when active */
+    box-shadow: 0 0 8px #28a745, 0 0 12px #28a745, 0 0 16px #28a745;
+}
+
+
+/* Sections */
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    margin: 30px 0 10px;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.sub-title {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.text {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.skill-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    gap: 8px;
+    min-width: 100px;
+}
+
+.green-text {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 8px #29b449, 0 0 12px #28a745, 0 0 16px #28a745;
+}
+
+/* Mengatur ukuran gambar dalam skill-card */
+.skill-card img {
+    width: 30px; /* Atur lebar gambar sesuai kebutuhan */
+    height: auto; /* Pastikan gambar tetap proporsional */
+    margin-right: 8px; /* Memberikan ruang antara gambar dan teks */
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+    /* Sidebar dipindahkan ke bawah */
+    .sidebar {
+        position: fixed;
+        bottom: 50; /* Sidebar berada di bawah layar */
+        left: 0;
+        top: 95%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 8%;
+        gap: 70px; /* Mengatur jarak antar ikon */
+        background-color: #333; /* Background saat sidebar di bawah */
+        padding: 10px 0;
+    }
+
+    .sidebar .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .sidebar {
+        position: fixed;
+        bottom: 50; /* Sidebar berada di bawah layar */
+        left: 0;
+        top: 95%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 8%;
+        gap: 60px; /* Mengatur jarak antar ikon */
+        background-color: #333; /* Background saat sidebar di bawah */
+        padding: 10px 0;
+    }
+
+    .sidebar .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}

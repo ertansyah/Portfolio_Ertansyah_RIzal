@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1d1d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: transparent; /* Default background */
+    padding: 10px;
+}
+
+.sidebar .icon {
+    background-color: #223438;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+/* Sidebar active icon */
+.sidebar .active {
+    background-color: #4CAF50; /* Green when active */
+    box-shadow: 0 0 8px #28a745, 0 0 12px #28a745, 0 0 16px #28a745;
+}
+.intro-container {
+    display: flex;
+    align-items: center;  /* Menyusun teks dan gambar secara vertikal di tengah */
+    justify-content: center; /* Membuat teks dan gambar sejajar di tengah */
+    margin-bottom: 20px;
+}
+/* Styling untuk gambar profil */
+.profile-image {
+    width: 500px;  /* Ukuran gambar */
+    height: 500px;  /* Ukuran gambar */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+    margin-left: 20px; /* Memberi jarak antara gambar dan teks */
+    object-fit: cover; /* Menjaga gambar tetap proporsional */
+}
+/* Main Content */
+.content {
+    text-align: center;
+    max-width: 1000px;
+    padding: 20px;
+    margin-top: -200px;
+}
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+.btn-resume {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+.btn-resume i {
+    margin-left: 8px;
+}
+.green-text {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 8px #29b449, 0 0 12px #28a745, 0 0 16px #28a745;
+}
+
+.typing-text {
+    display: inline-block;
+    border-right: 2px solid #29b449;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom; /* Mengatur perataan vertikal */
+    padding-left: 5px; /* Tambahkan sedikit padding kiri */
+    animation: blink-caret 0.7s steps(1) infinite;
+}
+
+
+/* Blinking caret effect */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Gaya untuk tombol */
+.btn-resume {
+    display: inline-block;
+    background-color: #29b449;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efek hover */
+.btn-resume:hover {
+    background-color: #28a745;
+    transform: scale(1.1);
+}
+
+/* Animasi saat tombol diklik */
+@keyframes clickEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-resume.clicked {
+    animation: clickEffect 0.4s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+    .sidebar {
+        position: fixed;
+        bottom: 50; /* Sidebar berada di bawah layar */
+        left: 0;
+        top: 95%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 8%;
+        gap: 70px; /* Mengatur jarak antar ikon */
+        background-color: #333; /* Background saat sidebar di bawah */
+        padding: 10px 0;
+    }
+
+    .sidebar .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .content {
+        text-align: center;
+        max-width: 600px;
+        padding: 10px; /* Reduced padding to avoid too much space around content */
+        margin-top: -150px; /* Move the content upwards */
+    }
+    .profile-image {
+        width: 300px;  /* Ukuran gambar */
+        height: 300px;  /* Ukuran gambar */
+        border-radius: 50%; /* Membuat gambar menjadi bulat */
+        margin-left: 20px; /* Memberi jarak antara gambar dan teks */
+        object-fit: cover; /* Menjaga gambar tetap proporsional */
+    } 
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.5rem;
+    }
+    .content h2 {
+        font-size: 1rem;
+    }
+    .btn-resume {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    .sidebar {
+        position: fixed;
+        bottom: 50; /* Sidebar berada di bawah layar */
+        left: 0;
+        top: 95%;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 8%;
+        gap: 60px; /* Mengatur jarak antar ikon */
+        background-color: #333; /* Background saat sidebar di bawah */
+        padding: 10px 0;
+    }
+
+    .sidebar .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .content {
+        text-align: center;
+        max-width: 600px;
+        padding: 10px; /* Reduced padding to avoid too much space around content */
+        margin-top: -180px; /* Move the content upwards */
+    }
+    .profile-image {
+        width: 200px;  /* Ukuran gambar */
+        height: 200px;  /* Ukuran gambar */
+        border-radius: 50%; /* Membuat gambar menjadi bulat */
+        margin-left: 20px; /* Memberi jarak antara gambar dan teks */
+        object-fit: cover; /* Menjaga gambar tetap proporsional */
+    }
+}
