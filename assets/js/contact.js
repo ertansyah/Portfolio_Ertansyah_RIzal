@@ -1,4 +1,4 @@
-<script>
+
     document.addEventListener("DOMContentLoaded", function() {
         // Dapatkan ID ikon berdasarkan halaman saat ini
         const currentPage = window.location.pathname;
@@ -43,4 +43,4 @@
             });
         }
     });
-</script>
+
